@@ -9,3 +9,38 @@ Form {
     margin-top: 3%;
 
 }
+
+
+@media only screen and (max-width: 600px) {
+    .top-margin{
+        margin-top: 10% !important;
+    }
+    .ques_button{
+        margin-left: 20% !important;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .top-margin{
+        margin-top: 7% !important;
+    }
+    .ques_button{
+        margin-left: 20% !important;
+    }
+}
+@media only screen and (max-width: 590px) {
+    .top-margin{
+        margin-top: 7% !important;
+    }
+    .ques_button{
+        margin-left: 20% !important;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .top-margin{
+        margin-top: 20% !important;
+        margin-left: 10% !important;
+    }
+    .ques_button{
+        margin-left: -4% !important;
+    }
+}

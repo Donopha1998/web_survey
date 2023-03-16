@@ -586,9 +586,7 @@ width: 30% !important;
           margin-top: 3% !important
         
 }
-.run_point{
-    margin-left: 2% !important;
-}
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -601,9 +599,7 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-.run_point{
-    margin-left: 2% !important;
-}
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -616,9 +612,7 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-.run_point{
-    margin-left: 6% !important;
-}
+
 }
 
 @media only screen and (max-width: 620px) {
@@ -631,9 +625,8 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-.run_point{
-    margin-left: 6% !important;
-}
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -646,9 +639,7 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-.run_point{
-    margin-left: 6% !important;
-}
+
 }
 
 
@@ -662,7 +653,5 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-.run_point{
-    margin-left: 6% !important;
-}
+
 }

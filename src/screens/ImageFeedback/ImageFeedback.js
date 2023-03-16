@@ -32,6 +32,16 @@ const ImageFeedback = () => {
     return [new_val, final_count];
   };
   const submitHandler = () => {
+        if (check === 8) {
+      // localStorage.setItem("feedback_1", feedback1);
+      if (localStorage.getItem("fields") === "hotel") {
+        localStorage.setItem("fields", "done");
+        navigate("/final");
+      } else {
+        localStorage.setItem("fields", "bank");
+        navigate("/Survey");
+      }
+    }
     if (check <= 8) {
       if (!trueFind(feedback)[0]) return message.info("Please give a rating");
       else {
@@ -42,16 +52,7 @@ const ImageFeedback = () => {
         setCheck(check + 1);
       }
     }
-    if (check == 8) {
-      // localStorage.setItem("feedback_1", feedback1);
-      if (localStorage.getItem("fields") === "hotel") {
-        localStorage.setItem("fields", "done");
-        navigate("/final");
-      } else {
-        localStorage.setItem("fields", "bank");
-        navigate("/Survey");
-      }
-    }
+
   };
   useEffect(() => {
     if (check === 8) {

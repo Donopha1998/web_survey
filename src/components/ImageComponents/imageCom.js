@@ -20,6 +20,7 @@ const ImageCom = ({ questions, func }) => {
     6: false,
     7: false,
   };
+  const feedback_options =["Strongly Disagree","Disagree","Somewhat Disagree","Neutral","Somewhat Agree","Agree","Strongly Agree"]
   useEffect(() => {
     func(options, questions[2]);
   }, [options]);
@@ -45,7 +46,7 @@ useEffect(() => {
           This ad is tailored to my situation
         </div>
         <div
-          style={{ display: "flex", gap: "2%", marginTop: "2%" }}
+          style={{ display: "flex", gap: "3%", marginTop: "2%" }}
           className="run_point"
         >
           {Object.entries(options).map((key) => (
@@ -65,8 +66,14 @@ useEffect(() => {
             >
               {key[0]}
             </div>
+            
           ))}
+      
         </div>
+        <div className="feed_text">
+        {feedback_options.map((val)=>(
+            <span style={{width:"8px"}} className={`val_${val}`}>{val}</span>
+          ))}</div>
       </div>
     </div>
   );

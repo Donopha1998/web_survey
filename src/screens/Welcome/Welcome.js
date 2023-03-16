@@ -26,7 +26,7 @@ const Welcome = () => {
       </div>
       <div></div>
       <div
-        style={{ marginTop: "1%", width: "25rem", padding: "0.9rem" }}
+        style={{ marginTop: "1%", width: "25rem", padding: "0.9rem 2.3rem" }}
         className="font"
       >
         Thanks for choosing to participating in this survey. This is a survey

@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 const Home = () => {
-  const [name, setName] = useState("");
+  
   const [age, setAge] = useState("");
   const [education, setEducation] = useState("");
   const [place, setPlace] = useState("");
@@ -75,8 +75,8 @@ const Home = () => {
   // const [interestVal, setInterestVal] = useState("");
   const submitHandler = () => {
     if (check == 1) {
-      console.log(name, age, education);
-      if (name === "" || age == "" || gender === "")
+      console.log( age, education);
+      if (age == "" || gender === "")
         return message.info("Please fill all the fields");
       setCheck(check + 1);
     } else if (check == 2) {
@@ -110,7 +110,6 @@ const Home = () => {
       }
    
       let items = [
-        name,
         age,
         gender,
         education,
@@ -174,19 +173,10 @@ const Home = () => {
         }}
       >
         {check == 1 && (
-          <Form>
-            <Form.Group className="mb-4 clr" controlId="formBasicEmail">
-              <Form.Label className="font">1.Your Name</Form.Label>
-              <Form.Control
-                type="text"
-                className="text-center clrx"
-                placeholder="Your Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </Form.Group>
+          <Form className="top-margin">
+       
             <Form.Group className="mb-4 clr" controlId="formBasic">
-              <Form.Label className="font">2.Your Gender</Form.Label>
+              <Form.Label className="font">1.Your Gender</Form.Label>
               <Form.Check
                 type="radio"
                 label="Male"
@@ -203,21 +193,16 @@ const Home = () => {
               />
             </Form.Group>
             <Form.Group className="mb-4 clr" controlId="formBasic">
-              <Form.Label className="font">3.Age</Form.Label>
-              <Form.Check
-                type="radio"
-                label="Under 27"
-                value="Under 27"
-                onChange={handleAge}
-                checked={age === "Under 27"}
+              <Form.Label className="font">2.Age</Form.Label>
+              <Form.Control
+                type="number"
+                className="text-center clrx"
+                placeholder="your age"
+                style={{ width: "55%", marginTop: "2%", marginLeft: "2%" }}
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
               />
-              <Form.Check
-                type="radio"
-                label="Above 27"
-                value="Above 27"
-                onChange={handleAge}
-                checked={age === "Above 27"}
-              />
+          
             </Form.Group>
           </Form>
         )}
@@ -225,7 +210,7 @@ const Home = () => {
           <Form>
             <Form.Group className="mb-4 clr" controlId="formBasic">
               <Form.Label>
-                4.What is the highest level of education you have completed?
+                3.What is the highest level of education you have completed?
               </Form.Label>
               <div style={{ color: "#A29EB6", fontSize: "14px" }}>
                 {" "}
@@ -254,6 +239,13 @@ const Home = () => {
                   onChange={handleEdu}
                   checked={education === "High school"}
                 />
+                    <Form.Check
+                  type="radio"
+                  label="higher secondary"
+                  value="higher secondary"
+                  onChange={handleEdu}
+                  checked={education === "higher secondary"}
+                />
                 <Form.Check
                   type="radio"
                   label="Bachelor’s degree (Undergraduate)"
@@ -275,11 +267,18 @@ const Home = () => {
                   onChange={handleEdu}
                   checked={education === "Ph.D. (doctorate)"}
                 />
+                  <Form.Check
+                  type="radio"
+                  label="Postdoc. (post doctorate)"
+                  value="Postdoc. (post doctorate)"
+                  onChange={handleEdu}
+                  checked={education === "Postdoc. (post doctorate)"}
+                />
               </div>
             </Form.Group>
             <Form.Group className="mb-4 clr" controlId="formBasicEmail">
               <Form.Label className="font">
-                5.Which District are you from?
+                4.Which District are you from?
               </Form.Label>
               <Form.Control
                 type="text"
@@ -297,7 +296,7 @@ const Home = () => {
             <Form>
               <Form.Group className="mb-4 clr" controlId="formBasic">
                 <Form.Label>
-                  6.In the past week, on average, approximately, how many days
+                  5.In the past week, on average, approximately, how many days
                   have you used Instagram?
                 </Form.Label>
                 <div style={{  marginTop: "3%" }}>
@@ -356,7 +355,7 @@ const Home = () => {
             <Form>
               <Form.Group className="mb-4 clr" controlId="formBasicEmail">
                 <Form.Label>
-                  7.Let us know your best friend’s name:(Max. Two or Three)
+                  6.Let us know your best friend’s name:(Max. Two or Three)
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -374,7 +373,7 @@ const Home = () => {
           <Form>
             <Form.Group className="mb-4 clr" controlId="formBasic">
               <Form.Label>
-                8.In the past week, on average, how many minutes per day have
+                7.In the past week, on average, how many minutes per day have
                 you spent on Facebook?:
               </Form.Label>
               <div style={{  marginTop: "3%" }}>
@@ -427,7 +426,7 @@ const Home = () => {
         {check === 5 && (
           <Form>
             <Form.Group className="mb-4 clr" controlId="formBasic">
-              <Form.Label>9.What are you interested in??</Form.Label>
+              <Form.Label>8.What are you interested in??</Form.Label>
               <div style={{ marginTop: "3%" }}>
                 <Form.Check
                   type="radio"
@@ -518,7 +517,7 @@ const Home = () => {
           <Form>
             <Form.Group className="mb-4 clr" controlId="formBasic">
               <Form.Label>
-                10.Select a life event that had happened to you in the last six
+                9.Select a life event that had happened to you in the last six
                 months:
               </Form.Label>
               <div style={{  marginTop: "3%" }}>
@@ -566,18 +565,12 @@ const Home = () => {
                 />
                 <Form.Check
                   type="radio"
-                  label="Traveled alone"
-                  value="Traveled alone"
+                  label="Travelled"
+                  value="Travelled"
                   onChange={handleLife}
-                  checked={life === "Traveled alone"}
+                  checked={life === "Travelled"}
                 />
-                <Form.Check
-                  type="radio"
-                  label="Traveled with friends/family"
-                  value="Traveled with friends/family"
-                  onChange={handleLife}
-                  checked={life === "Traveled with friends/family"}
-                />
+              
                 <Form.Check
                   type="radio"
                   label="Got a new child"
@@ -615,6 +608,7 @@ const Home = () => {
         )}
         <Button
           variant="dark"
+          className="ques_button"
           style={{ marginTop: "5%", marginLeft: "3%" }}
           onClick={submitHandler}
         >
