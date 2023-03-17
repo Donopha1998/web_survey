@@ -1,46 +1,42 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from "react";
 import bank from "../../assets/bank.svg";
 import spoon from "../../assets/spoon.svg";
 import tick from "../../assets/tick.svg";
 
 import Button from "react-bootstrap/esm/Button";
-import "./survey.css"
-import { Link } from 'react-router-dom';
+import "./survey.css";
+import { Link } from "react-router-dom";
 const Survey = () => {
-const[hover,setHover]=useState(0)
-const[text,setText]=useState(0)
-const[link,setLink]=useState("")
-const [fields,setFields]=useState("")
-let [val,setVal]=useState(0)
-const firstText = "Complete first Survey";
-const lastText = "Complete last Survey";
-    const tickHover=(id)=>{
-   setHover(id);
-   if (id == 1) setLink("bank");
-   else setLink("hotel");
-   console.log(link,'link')
+  const [hover, setHover] = useState(0);
+  const [text, setText] = useState(0);
+  const [link, setLink] = useState("");
+  const [fields, setFields] = useState("");
+  let [val, setVal] = useState(0);
+  const firstText = "Complete first Survey";
+  const lastText = "Complete last Survey";
+
+  const tickHover = (id) => {
+    setHover(id);
+    console.log(val,'vals')
+    if (id == 1) setLink("bank");
+    else setLink("hotel");
+    console.log(link, "link");
+  };
+  const submitHandler = () => {};
+  useEffect(() => {
+    let value = localStorage.getItem("fields");
+
+    if (value === "bank") {
+      setHover(1);
+      setVal(1);
+      setLink("hotel");
+    } else if (value === "hotel") {
+      setVal(2);
+      setHover(2);
+      setLink("bank");
     }
-const submitHandler =()=>{
-    console.log("running")
-}
-useEffect(()=>{
-let value=  localStorage.getItem("fields")
-
-  if (value === "bank") {
-    setHover(1);
-    setVal(1);
-    setLink("hotel");
-  } else if (value === "hotel") {
-    setVal(2);
-    setHover(2);
-    setLink("bank");
-  
-  }
-},[])
-const submitOk=(val)=>{
-
-
-}
+  }, []);
+  const submitOk = (val) => {};
   return (
     <div>
       <div
@@ -64,9 +60,10 @@ const submitOk=(val)=>{
           justifyContent: "center",
           gap: "1rem",
         }}
+        className="main_survey"
       >
         <div style={{ fontWeight: "700", fontSize: "18px" }}>
-        {val===1||val===2 ? lastText:firstText}
+          {val === 1 || val === 2 ? lastText : firstText}
         </div>
         <div>
           Complete <span style={{ color: "#E15A93" }}>both</span> surveys one
@@ -119,7 +116,9 @@ const submitOk=(val)=>{
             style={{ marginLeft: "37%", marginTop: "25%" }}
           />
           <span
-            className={text === 1 ? "white" : "black"}
+            className={` ${
+              text === 1 && val === 0 ? "white" : val === 2 && text === 1? "black" : "white"
+            }} `}
             style={{ marginLeft: "33%" }}
           >
             Banking
@@ -133,9 +132,9 @@ const submitOk=(val)=>{
             border: "1px solid black",
             borderRadius: "15px",
             cursor: "pointer",
+            backgroundColor: `${val === 1 ? "black":""}`,
           }}
-          className={val === 2 ? "opacity" : "lop"}
-   
+          className={val === 1 ? "lop" : "opacity"}
           onClick={() => tickHover(2)}
           onMouseEnter={() => {
             setText(2);
@@ -150,7 +149,14 @@ const submitOk=(val)=>{
             alt="ok"
             style={{ marginLeft: "37%", marginTop: "25%" }}
           />
-          <span className={text === 2 ? "white" : "black"}>Restaurant</span>
+          <span
+          style={{color:"black"}}
+            className={` ${
+              text === 2 && (val === 0 || val===1) ? "white" : val === 2 && text === 2 ? "black" : "black"
+            } `}
+          >
+            Restaurant
+          </span>
         </div>
       </div>
       <div
@@ -196,6 +202,6 @@ const submitOk=(val)=>{
       </div>
     </div>
   );
-}
+};
 
-export default Survey
+export default Survey;

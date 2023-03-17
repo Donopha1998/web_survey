@@ -41,8 +41,8 @@ useEffect(() => {
         <span className="width ok_text font_style">{questions[0]}</span>
         <span className="font_style do_text width2">{questions[1]}</span>
       </div>
-      <div className="feed_points">
-        <div style={{ fontWeight: "500", fontSize: "18px", marginLeft: "2%" }}>
+      <div className="feed_1 feed_points">
+        <div style={{ fontWeight: "500", fontSize: "18px", marginLeft: "5%" }} className="tailor_0 tailor">
           This ad is tailored to my situation
         </div>
         <div
@@ -70,7 +70,7 @@ useEffect(() => {
           ))}
       
         </div>
-        <div className="feed_text">
+        <div className="feed_text_1 feed_text">
         {feedback_options.map((val)=>(
             <span style={{width:"8px"}} className={`val_${val}`}>{val}</span>
           ))}</div>

@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import hotel from "../../assets/hotel_img.jpeg";
 import "./imageCompon2.css";
 const ImageCompon2 = ({ questions, func }) => {
-  const [options, setOptions] = useState(JSON.parse(localStorage.getItem(questions[3])) ||{
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-    5: false,
-    6: false,
-    7: false,
-  })
+  const [options, setOptions] = useState(
+    JSON.parse(localStorage.getItem(questions[3])) || {
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false,
+      6: false,
+      7: false,
+    }
+  );
   const new_options = {
     1: false,
     2: false,
@@ -20,18 +22,24 @@ const ImageCompon2 = ({ questions, func }) => {
     6: false,
     7: false,
   };
+  const feedback_options = [
+    "Strongly Disagree",
+    "Disagree",
+    "Somewhat Disagree",
+    "Neutral",
+    "Somewhat Agree",
+    "Agree",
+    "Strongly Agree",
+  ];
   useEffect(() => {
     func(options, questions[3]);
-   
   }, [options]);
-useEffect(()=>{
-   if (localStorage.getItem(questions[3])) {
-     setOptions(JSON.parse(localStorage.getItem(questions[3])));
-   }
- 
-},[])
+  useEffect(() => {
+    if (localStorage.getItem(questions[3])) {
+      setOptions(JSON.parse(localStorage.getItem(questions[3])));
+    }
+  }, []);
   const handleChoose = (id, value) => {
-
     setOptions({ ...new_options, [id]: !value });
   };
   return (
@@ -74,11 +82,11 @@ useEffect(()=>{
         }}
         className="feed_points"
       >
-        <div style={{ fontWeight: "500", fontSize: "18px", marginLeft: "2%" }}>
+        <div style={{ fontWeight: "500", fontSize: "18px", marginLeft: "4%" }} className="tailor_2">
           This ad is tailored to my situation
         </div>
         <div
-          style={{ display: "flex", gap: "2%", marginTop: "2%" }}
+          style={{ display: "flex", gap: "3%", marginTop: "2%" }}
           className="run_point"
         >
           {Object.entries(options).map((key) => (
@@ -88,9 +96,9 @@ useEffect(()=>{
                 width: "1.6rem",
                 height: "2.1rem",
                 border: "1px solid #A29EB6",
-                display:"flex",
-                alignItems:"center",
-                justifyContent:"center",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 borderRadius: "3px",
                 cursor: "pointer",
               }}
@@ -98,6 +106,13 @@ useEffect(()=>{
             >
               {key[0]}
             </div>
+          ))}
+        </div>
+        <div className="feed_text feed_text_2">
+          {feedback_options.map((val) => (
+            <span style={{ width: "8px" }} className={`val_${val}`}>
+              {val}
+            </span>
           ))}
         </div>
       </div>

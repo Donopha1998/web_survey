@@ -582,11 +582,26 @@ width: 30% !important;
     .feed_points{
    
        
-          margin-left: 37% !important;
+          margin-left: 35% !important;
           margin-top: 3% !important
         
 }
-
+.run_point{
+   
+       
+    margin-left: 2% !important;
+  
+}
+.feed_text{
+    gap: 5% !important;
+    margin-left: 2% !important;
+}
+.val_Agree{
+    margin-left: 0% !important;
+}
+.tailor_2{
+    margin-left: 4% !important;
+}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -599,10 +614,74 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-
+.feed_text{
+    gap: 5% !important;
+    margin-left: 2% !important;
 }
 
-@media only screen and (max-width: 700px) {
+.feed_1{
+    margin-left: 33% !important;
+}
+.feed_text_1{
+    gap:6% !important;
+    margin-left: 0 !important;
+}
+}
+
+@media only screen and (max-width: 1100px) {
+ 
+
+.feed_text{
+    gap: 5.5% !important;
+    margin-left: 2% !important;
+}
+    .feed_text_1{
+    gap:5.5% !important;
+    margin-left: 1% !important;
+}
+.val_Agree{
+    margin-left: 1% !important;
+}
+}
+@media only screen and (max-width: 900px) {
+ 
+    .feed_points{
+   
+       
+          margin-left: 32% !important;
+          margin-top: 3% !important;
+          font-size: 15px !important
+        
+}
+.run_point{
+    gap: 3.8% !important;
+}
+.feed_text{
+    gap: 6.5% !important;
+    margin-left: 2% !important;
+}
+}
+
+@media only screen and (max-width: 840px) {
+ 
+    .feed_points{
+   
+       
+          margin-left: 32% !important;
+          margin-top: 3% !important;
+          font-size: 15px !important
+        
+}
+.run_point{
+    gap: 4% !important;
+    margin-left: 0% !important;
+}
+.feed_text{
+    gap: 6.8% !important;
+    margin-left: 0% !important;
+}
+}
+@media only screen and (max-width: 800px) {
  
     .feed_points{
    
@@ -610,9 +689,53 @@ width: 30% !important;
           margin-left: 30% !important;
           margin-top: 3% !important;
           font-size: 15px !important
+    
+}
+.run_point{
+    gap: 4% !important;
+    margin-left: 0% !important;
+}
+.feed_text{
+    gap: 7.2% !important;
+    margin-left: 0% !important;
+}
+}
+@media only screen and (max-width: 660px) {
+ 
+    .feed_points{
+   
+       
+          margin-left: 24% !important;
+          margin-top: 3% !important;
+          font-size: 15px !important
+    
+}
+.run_point{
+    gap: 5.5% !important;
+    margin-left: 0% !important;
+}
+.feed_text{
+    margin-top: 1.5% !important;
+    gap: 9% !important;
+    margin-left: 0% !important;
+}
+}
+@media only screen and (max-width: 700px) {
+ 
+    .feed_points{
+   
+       
+          margin-left: 23% !important;
+          margin-top: 3% !important;
+          font-size: 15px !important
         
 }
-
+.tailor_2{
+    margin-left: 6% !important;
+}
+.feed_1{
+    margin-left: 27% !important;
+}
 }
 
 @media only screen and (max-width: 620px) {
@@ -620,12 +743,32 @@ width: 30% !important;
     .feed_points{
    
        
-          margin-left: 27% !important;
+          margin-left: 20% !important;
           margin-top: 3% !important;
           font-size: 15px !important
         
 }
 
+.run_point{
+    gap: 6% !important;
+    margin-left: 0% !important;
+}
+.feed_text{
+    margin-top: 1.5% ;
+   
+    margin-left: 0% !important;
+       font-size: 10px !important
+}
+.feed_text_2{
+    /* margin-left: 1% !important; */
+    gap: 9%  !important;
+}
+.feed_text_2 .val_Agree{
+    margin-left: 2.5% !important;
+}
+.feed_text_1{
+    gap:9.5% !important
+}
 
 }
 
@@ -639,7 +782,9 @@ width: 30% !important;
           font-size: 15px !important
         
 }
-
+.feed_text_1{
+    gap:10% !important
+}
 }
 
 
@@ -653,5 +798,78 @@ width: 30% !important;
           font-size: 15px !important
         
 }
+.feed_text_1{
+    gap:10% !important
+}
+}
 
+
+@media only screen and (max-width: 500px) {
+ 
+    .feed_points{
+   
+       
+          margin-left: 18% !important;
+          margin-top: 8% !important;
+        
+}
+
+.run_point{
+    gap: 5.5% !important;
+    margin-left: 0% !important;
+}
+.feed_text{
+    margin-top: 1.5% !important;
+    gap: 10.3% ;
+    margin-left: 0% ;
+       font-size: 9.5px !important
+}
+.val_Neutral{
+    padding-left: 5px !important;
+}
+.feed_text_2{
+    /* margin-left: 1% !important; */
+    gap: 9%  !important;
+}
+.feed_text_2 .val_Agree{
+    margin-left: 2.5% !important;
+}
+.feed_text_1{
+    gap:10% !important
+}
+}
+
+@media only screen and (max-width: 450px) {
+ 
+    .feed_points{
+   
+       
+          margin-left: 14% !important;
+          margin-top: 8% !important;
+        
+}
+
+.run_point{
+    gap: 5.5% !important;
+    margin-left: 0% !important;
+}
+.feed_text{
+    margin-top: 1.5% !important;
+    gap: 10% ;
+    margin-left: 0% ;
+       font-size: 9.5px !important
+}
+.val_Neutral{
+    padding-left: 5px !important;
+}
+.feed_text_2{
+    /* margin-left: 1% !important; */
+    gap: 10%  !important;
+}
+.feed_text_2 .val_Agree{
+    margin-left: 2.5% !important;
+}
+.tailor_2{
+    margin-left: 4% !important;
+}
 }

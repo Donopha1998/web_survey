@@ -140,6 +140,7 @@ const Home = () => {
           justifyContent: "center",
           fontSize: "20px",
           marginTop: "3%",
+          
         }}
       >
         <div
@@ -170,6 +171,7 @@ const Home = () => {
           justifyContent: "center",
           verticalAlign: "center",
           marginTop: "5%",
+          padding: "0.5rem 3rem",
         }}
       >
         {check == 1 && (
@@ -374,7 +376,7 @@ const Home = () => {
             <Form.Group className="mb-4 clr" controlId="formBasic">
               <Form.Label>
                 7.In the past week, on average, how many minutes per day have
-                you spent on Facebook?:
+                you spent on Instagram?:
               </Form.Label>
               <div style={{  marginTop: "3%" }}>
                 <Form.Check

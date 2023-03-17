@@ -1,6 +1,10 @@
 .lop:hover{
 background-color: #000;
 }
+
+.done{
+    background-color: black;
+}
 .opacity{
     opacity:0.5 !important;
     cursor:unset !important
@@ -10,6 +14,7 @@ background-color: #000;
     z-index: 999;
     left: 72% !important;
     top: 7% !important;
+
 }
 
 .right_tick{
@@ -17,6 +22,7 @@ background-color: #000;
      z-index: 999;
        left: 193%;
     top: 7%;
+
 }
 
 .font{
@@ -60,6 +66,10 @@ margin-left: 30%;
     .second_para{
             width: 100% !important;
     }
+    .main_survey{
+        align-items: flex-start !important;
+        margin-left: 15% !important;
+    }
 }
 @media only screen and (max-width: 450px) {
     .first_para{
@@ -67,5 +77,9 @@ margin-left: 30%;
     }
     .second_para{
             width: 100% !important;
+    }
+    .main_survey{
+        align-items: flex-start !important;
+        margin-left: 10% !important;
     }
 }
